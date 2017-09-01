@@ -1,0 +1,34 @@
+{
+  "name": "validator-param",
+  "version": "0.1.0",
+  "description": "A library, which can create validators to validate request parameters easily. ",
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.0"
+  },
+  "scripts": {
+    "test": "mocha --recursive test/mocha",
+    "bump_path": "npm version patch -m \"upgrade to %s\"",
+    "doc": "jsdoc2md lib/Validator.js > doc/api.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yunnysunny/request-validator.git"
+  },
+  "keywords": [
+    "parameter",
+    "validator",
+    "express"
+  ],
+  "author": "yunnysunny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yunnysunny/request-validator/issues"
+  },
+  "homepage": "https://github.com/yunnysunny/request-validator#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "jsdoc-to-markdown": "^3.0.0",
+    "mocha": "^3.5.0"
+  }
+}
