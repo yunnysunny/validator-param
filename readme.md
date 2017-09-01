@@ -2,6 +2,8 @@
 
 A library, which can create validators to validate request parameters easily. 
 
+[![NPM](https://nodei.co/npm/validator-param.png?downloads=true)](https://nodei.co/npm/validator-param/)  
+
 ## Install
 ```npm install validator-param --save```
 
