@@ -1,3 +1,10 @@
+## Modules
+
+<dl>
+<dt><a href="#module_filter">filter</a></dt>
+<dd></dd>
+</dl>
+
 ## Classes
 
 <dl>
@@ -13,6 +20,40 @@
 <dt><a href="#Schema">Schema</a></dt>
 <dd></dd>
 </dl>
+
+<a name="module_filter"></a>
+
+## filter
+
+* [filter](#module_filter)
+    * [module.exports(option)](#exp_module_filter--module.exports) ⏏
+        * [~ErrorResponseCallback](#module_filter--module.exports..ErrorResponseCallback) : <code>function</code>
+
+<a name="exp_module_filter--module.exports"></a>
+
+### module.exports(option) ⏏
+**Kind**: Exported function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| option | <code>Object</code> |  |
+| option.basePath | <code>String</code> | The directory of validator schema files to use. |
+| option.urlPrefix | <code>String</code> | The prefix string of the url path to validate. |
+| [option.filenameReplaces] | <code>Object</code> | A map of data to indicate which characters to be replaced. |
+| [option.filenameSuffix] | <code>String</code> | Only the files end with `option.filenameSuffix` will be processed. The default value is `.js` . |
+| [option.errorResponseCallback] | <code>ErrorResponseCallback</code> |  |
+
+<a name="module_filter--module.exports..ErrorResponseCallback"></a>
+
+#### module.exports~ErrorResponseCallback : <code>function</code>
+**Kind**: inner typedef of [<code>module.exports</code>](#exp_module_filter--module.exports)  
+
+| Param | Type |
+| --- | --- |
+| req | <code>Request</code> | 
+| res | <code>Response</code> | 
+| next | <code>function</code> | 
+| err | <code>String</code> \| <code>Object</code> \| <code>undefined</code> | 
 
 <a name="Validator"></a>
 
