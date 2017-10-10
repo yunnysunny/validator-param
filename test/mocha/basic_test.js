@@ -34,4 +34,18 @@ describe('validator-param test#',function() {
         const error2 = validator2.doValidate({jsonParam:'xx'});
         expect(error2).to.be.an('object').and.have.property('code').and.equal(1);
     });
+
+    it('the result of validation should return error for the second parameter is empty',function() {
+        const schema = {
+            first:{
+                type:[Number]
+            },
+            second:{
+                required:[true,{code:1}]
+            }
+        };
+        const validator = new Validator(schema);
+        const error = validator.doValidate({});
+        expect(error).to.be.an('object').and.have.property('code').and.equal(1);
+    });
 });
