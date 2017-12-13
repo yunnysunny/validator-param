@@ -1,6 +1,6 @@
 {
   "name": "validator-param",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A library, which can create validators to validate request parameters easily. ",
   "main": "index.js",
   "engines": {
