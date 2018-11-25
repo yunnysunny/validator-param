@@ -12,6 +12,13 @@
 <dd></dd>
 </dl>
 
+## Functions
+
+<dl>
+<dt><a href="#CustomValidateFunction">CustomValidateFunction(value)</a> ⇒ <code>*</code></dt>
+<dd></dd>
+</dl>
+
 ## Typedefs
 
 <dl>
@@ -63,7 +70,7 @@
 * [Validator](#Validator)
     * [new Validator()](#new_Validator_new)
     * _instance_
-        * [.doValidate(params)](#Validator+doValidate) ⇒ <code>null</code> \| <code>Object</code>
+        * [.doValidate(params)](#Validator+doValidate) ⇒ <code>null</code> \| <code>Object</code> \| <code>String</code>
     * _static_
         * [.Validator](#Validator.Validator)
             * [new Validator(schema)](#new_Validator.Validator_new)
@@ -75,7 +82,7 @@ The class of Validator
 
 <a name="Validator+doValidate"></a>
 
-### validator.doValidate(params) ⇒ <code>null</code> \| <code>Object</code>
+### validator.doValidate(params) ⇒ <code>null</code> \| <code>Object</code> \| <code>String</code>
 To do a validation.
 
 **Kind**: instance method of [<code>Validator</code>](#Validator)  
@@ -98,16 +105,27 @@ Creates an instance of Validator.
 | --- | --- |
 | schema | [<code>Schema</code>](#Schema) | 
 
+<a name="CustomValidateFunction"></a>
+
+## CustomValidateFunction(value) ⇒ <code>\*</code>
+**Kind**: global function  
+**Returns**: <code>\*</code> - the validate result, when none error, you can return `false` `undefined` `null` or anything can transform to false, when the value is not suitable, you can return a string or an object.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | the value you want to validated |
+
 <a name="ValidateElement"></a>
 
 ## ValidateElement
 **Kind**: global typedef  
 **Properties**
 
-| Name | Type |
-| --- | --- |
-| required | <code>Boolean</code> \| <code>Array</code> | 
-| type | <code>Number</code> \| <code>JSON</code> \| <code>Date</code> \| <code>Array</code> | 
+| Name | Type | Description |
+| --- | --- | --- |
+| required | <code>Boolean</code> \| <code>Array</code> | indicate whether the current field necessary |
+| type | <code>Number</code> \| <code>JSON</code> \| <code>Date</code> \| <code>Array</code> | declare the current field's type. |
+| custom | <code>FuncCustomValidateFunctiontion</code> | the custom validate function |
 
 <a name="Schema"></a>
 

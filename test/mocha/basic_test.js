@@ -48,4 +48,21 @@ describe('validator-param test#',function() {
         const error = validator.doValidate({});
         expect(error).to.be.an('object').and.have.property('code').and.equal(1);
     });
+
+    it('the custom validate function',function() {
+        const ERROR_MSG = 'you must give a positive number';
+        const schema = {
+            num: {
+                type:Number,
+                custom: function(value) {
+                    if (value < 0) {
+                        return ERROR_MSG;
+                    }
+                }
+            }
+        };
+        const validator = new Validator(schema);
+        const error = validator.doValidate({num:-1});
+        expect(error).to.be.a('string').and.to.equal(ERROR_MSG);
+    })
 });
