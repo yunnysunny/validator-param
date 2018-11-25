@@ -3,7 +3,7 @@
 A library, which can create validators to validate request parameters easily. 
 
 [![NPM](https://nodei.co/npm/validator-param.png?downloads=true)](https://nodei.co/npm/validator-param/)  
-
+[![Test coverage][https://img.shields.io/coveralls/yunnysunny/validator-param.svg?style=flat-square]][https://coveralls.io/r/yunnysunny/validator-param?branch=master]
 [![NPM version](https://img.shields.io/npm/v/validator-param.svg?style=flat-square)](https://npmjs.com/package/validator-param)
 [![Build status](https://travis-ci.org/yunnysunny/validator-param.svg?branch=master)](https://travis-ci.org/yunnysunny/validator-param)
 
