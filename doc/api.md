@@ -15,7 +15,7 @@
 ## Functions
 
 <dl>
-<dt><a href="#CustomValidateFunction">CustomValidateFunction(value)</a> ⇒ <code>*</code></dt>
+<dt><a href="#CustomValidateFunction">CustomValidateFunction(value, [req])</a> ⇒ <code>*</code></dt>
 <dd></dd>
 </dl>
 
@@ -107,13 +107,14 @@ Creates an instance of Validator.
 
 <a name="CustomValidateFunction"></a>
 
-## CustomValidateFunction(value) ⇒ <code>\*</code>
+## CustomValidateFunction(value, [req]) ⇒ <code>\*</code>
 **Kind**: global function  
 **Returns**: <code>\*</code> - the validate result, when none error, you can return `false` `undefined` `null` or anything can transform to false, when the value is not suitable, you can return a string or an object.  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | value | <code>\*</code> | the value you want to validated |
+| [req] | <code>http.IncomingMessage</code> | the req object of express |
 
 <a name="ValidateElement"></a>
 

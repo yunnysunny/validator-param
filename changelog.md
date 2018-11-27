@@ -1,3 +1,7 @@
+# v0.4.0
+## Add
+1. Add the parameter of express req object to custom validate function.
+
 # v0.3.0
 ## Add
 1. Add the function of custom validate.

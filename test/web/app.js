@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const session = require('express-session');
 const {filter:requestValidator} = require('../../');
 const index = require('./routes/index');
 
@@ -17,6 +18,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  name: 'validator_session',
+  secret: 'chyingp',  // 
+  saveUninitialized: false,  //
+  resave: false
+}));
 app.use(requestValidator({
   basePath:path.join(__dirname,'./validators'),
   urlPrefix:'/i/',
