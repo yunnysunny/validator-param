@@ -2,6 +2,23 @@ const {expect} = require('chai');
 const {Validator} = require('../../index');
 
 describe('validator-param test#',function() {
+    it('the parameter should be transform to needed type',function() {
+        const schema = {
+            number : {
+                type : Number,
+                required : true
+            },
+            date: {
+                type:Date
+            }
+        };
+        const validator = new Validator(schema);
+        const params = {number:'2',date:'2018-01-01 10:00:00'};
+        const error = validator.doValidate(params);
+        expect(error).to.be.a('null');
+        expect(params.number).to.be.a('number');
+        expect(params.date).to.be.a('date');
+    });
     it('invalid parameter should be checked with error',function() {
         const schema = {
             intParam : {

@@ -1,3 +1,7 @@
+# v0.4.1
+## Fix
+1. Fix the data type transform issue, see [#3](https://github.com/yunnysunny/validator-param/issues/3).
+
 # v0.4.0
 ## Add
 1. Add the parameter of express req object to custom validate function.

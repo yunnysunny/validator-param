@@ -114,6 +114,10 @@ As showed in **code 2.2.2**, when request `/i/data/list` without parameter `begi
 
 See the [api](doc/api.md) document.
 
+## Attention
+
+Not use querysting in POST method, it will case the req.query's data type transform fail.
+
 ## License
 
 [MIT](LICENSE)
